@@ -1,0 +1,197 @@
+/* About Us page — page-specific styles only. style.css / utility.css stay untouched. */
+
+.about-hero {
+    position: relative;
+    height: 80vh;
+    background-image: url('Assets/Image/about us hero image.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 1, 42, 0.45);
+}
+
+.about-hero h1 {
+    position: relative;
+    color: var(--white);
+    margin-bottom: 0;
+}
+
+.about-building-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Counter strip */
+.mini-stats {
+    display: flex;
+    margin: 2rem 0 0;
+}
+
+.mini-stats .stat-item {
+    padding: 0 3rem;
+    border-right: 1px solid #d9d9d9;
+}
+
+.mini-stats .stat-item:first-child {
+    padding-left: 0;
+}
+
+.mini-stats .stat-item:last-child {
+    border-right: none;
+}
+
+.mini-stats .counter-number {
+    font-size: 65px;
+    line-height: 1.1;
+    color: var(--primary-red);
+    font-family: var(--font-heading-main);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.mini-stats .stat-item p {
+    color: var(--primary-blue);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* Vision & Mission */
+.vision-mission-section {
+    background-image: url('Assets/Image/vision mission bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.vision-mission {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.vm-card {
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    padding: 3rem 2.5rem;
+    text-align: center;
+}
+
+.vm-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #FBDDDD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.vm-icon img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.vm-card h3 {
+    color: var(--black);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.vm-card p {
+    color: var(--body-grey);
+    margin-bottom: 0;
+}
+
+/* Core values */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+
+.value-card {
+    max-width: 380px;
+    width: 100%;
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    border-right: 3px solid var(--primary-red);
+    border-bottom: 3px solid var(--primary-red);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.value-icon {
+    margin-bottom: 1.5rem;
+}
+
+.value-icon img {
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.value-card h4 {
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.value-card p {
+    color: var(--body-grey);
+    font-size: var(--fs-small);
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+    .vision-mission {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mini-stats .stat-item {
+        padding: 0 1.5rem;
+    }
+
+    .mini-stats .counter-number {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-hero {
+        height: 60vh;
+    }
+
+    .mini-stats {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .mini-stats .stat-item {
+        padding: 0;
+        border-right: none;
+    }
+
+    .mini-stats .counter-number {
+        font-size: 40px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
