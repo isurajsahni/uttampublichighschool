@@ -97,6 +97,12 @@ p {
 .padding-section-large {
   padding: var(--padding-section-large);
 }
+
+@media (max-width: 767px) {
+  .padding-section-large {
+    padding: 60px 0rem;
+  }
+}
 .padding-section-medium {
   padding: var(--padding-section-medium);
 }
