@@ -65,6 +65,13 @@
 .social-icons{
   max-width: 30px;
 }
+
+/* Top contact bar — hidden on mobile; phone/email stay available in the footer */
+@media (max-width: 767px) {
+  .marque {
+    display: none;
+  }
+}
 .btn-primary{
   background-color: var(--primary-red);
   color: var(--white);
@@ -474,6 +481,13 @@ p.big {
     right: -20px;
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
 }
+/* Below this the image column meets the wrapper edge, so the -20px
+   overhang would push the badge past the viewport. */
+@media (max-width: 1200px) {
+    .badge {
+        right: 0;
+    }
+}
 .about-flex{
     display: flex;
     gap: 50px;
@@ -493,6 +507,9 @@ p.big {
 }
 .image-container {
     max-width: 100%;
+}
+.badge {
+    right: 0;
 }
 
 }
@@ -725,6 +742,7 @@ img.principal-image-mobile {
 .badge {
     padding: 16px 24px 0;
     max-width: 150px;
+    right: 0;
 }
 }
 
