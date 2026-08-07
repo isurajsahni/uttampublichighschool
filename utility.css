@@ -228,7 +228,7 @@ a{
   transition: transform 0.3s ease-in-out;
 }
 .link-text::after{
-  background-color: var(--primary-red);
+  background-color: var(--primary-blue);
 }
 .link-text-white::after{
   background-color: var(--white);
@@ -236,9 +236,6 @@ a{
 .link-text:hover::after,
 .link-text-white:hover::after{
   transform: scaleX(1);
-}
-.link-text:hover{
-  color: var(--primary-red);
 }
 .mb-md{
   margin-bottom:30px;

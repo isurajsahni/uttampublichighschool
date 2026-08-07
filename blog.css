@@ -2,7 +2,7 @@
 
 .blog-hero {
     position: relative;
-    height: 45vh;
+    height: 80vh;
     min-height: 320px;
     background-image: url('Assets/Image/infrastructure.webp');
     background-size: cover;
@@ -73,7 +73,7 @@
 /* Article page */
 .article-hero {
     position: relative;
-    height: 45vh;
+    height: 80vh;
     min-height: 320px;
     background-size: cover;
     background-position: center;
@@ -153,8 +153,7 @@
     }
     .blog-hero,
     .article-hero {
-        height: 38vh;
-        min-height: 240px;
+        height: 60vh;
     }
     .article-hero .wrapper {
         padding-bottom: 2rem;

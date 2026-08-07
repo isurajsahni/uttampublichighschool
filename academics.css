@@ -1,0 +1,260 @@
+/* Academics page — page-specific styles only. style.css / utility.css stay untouched. */
+
+.academics-hero {
+    position: relative;
+    height: 80vh;
+    min-height: 320px;
+    background-image: url('Assets/Image/smart class.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.academics-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 1, 42, 0.55);
+}
+
+.academics-hero h1 {
+    position: relative;
+    color: var(--white);
+    margin-bottom: 0;
+}
+
+.academics-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.section-intro {
+    max-width: 760px;
+    margin: 0 auto 3rem;
+}
+
+/* Programme stages */
+.stage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.stage-card {
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    border-right: 3px solid var(--primary-red);
+    border-bottom: 3px solid var(--primary-red);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stage-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--light-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+
+.stage-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.stage-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0;
+}
+
+.stage-classes {
+    font-size: var(--fs-small);
+    font-weight: 700;
+    color: var(--primary-red);
+    margin-bottom: 0.25rem;
+}
+
+.stage-card p {
+    color: var(--body-grey);
+    font-size: var(--fs-small);
+    margin-bottom: 0;
+}
+
+/* Subjects */
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+}
+
+.subject-item {
+    background: var(--white);
+    border: 1px solid #F3DCDC;
+    border-radius: var(--radius-sm);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.subject-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.subject-item svg {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0.75rem;
+}
+
+.subject-item p {
+    font-size: var(--fs-small);
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 0;
+}
+
+/* Teaching approach */
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.approach-card {
+    background: var(--light-red);
+    border-radius: var(--radius-sm);
+    padding: 2.5rem 2rem;
+}
+
+.approach-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.approach-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.approach-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.75rem;
+}
+
+.approach-card p {
+    color: var(--body-grey);
+    font-size: var(--fs-small);
+    margin-bottom: 0;
+}
+
+/* Assessment list */
+.assessment-flex {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.assessment-col {
+    max-width: 650px;
+    width: 100%;
+}
+
+.assessment-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.assessment-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid #F0E4E4;
+    color: var(--body-grey);
+    font-size: var(--fs-small);
+    line-height: 1.6;
+}
+
+.assessment-list li:last-child {
+    border-bottom: none;
+}
+
+.assessment-list svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.assessment-list strong {
+    color: var(--black);
+}
+
+@media (max-width: 1140px) {
+    .subject-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .stage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .assessment-flex {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .assessment-col {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .academics-hero {
+        height: 60vh;
+    }
+    .subject-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .section-intro {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .stage-grid {
+        grid-template-columns: 1fr;
+    }
+    .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .approach-card {
+        padding: 2rem 1.5rem;
+    }
+}
