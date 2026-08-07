@@ -8,9 +8,12 @@ let index = 0;
 let whyAutoplayTimer;
 
 function getVisibleCards() {
-    if (window.innerWidth <= 576) return 1;
-    if (window.innerWidth <= 991) return 2;
-    return 4;
+    // Derive the number of fully visible cards from the real card width, so
+    // the slider adapts automatically to the 450px (desktop) / 320px (mobile)
+    // card sizes instead of assuming a fixed count.
+    const containerWidth = slider.parentElement.clientWidth;
+    const cardWidth = cards[0].offsetWidth + 20; // card + flex gap
+    return Math.max(Math.floor(containerWidth / cardWidth), 1);
 }
 
 function getMaxIndex() {

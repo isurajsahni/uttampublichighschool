@@ -1,0 +1,261 @@
+/* Admissions page — page-specific styles only. style.css / utility.css stay untouched. */
+
+.admissions-hero {
+    position: relative;
+    height: 80vh;
+    min-height: 320px;
+    background-image: url('Assets/Image/front-gate school.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admissions-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 1, 42, 0.55);
+}
+
+.admissions-hero h1 {
+    position: relative;
+    color: var(--white);
+    margin-bottom: 0;
+}
+
+.section-intro {
+    max-width: 760px;
+    margin: 0 auto 3rem;
+}
+
+/* Admission process steps */
+.admission-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.step-card {
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    border-right: 3px solid var(--primary-red);
+    border-bottom: 3px solid var(--primary-red);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.step-number {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--light-red);
+    color: var(--primary-red);
+    font-family: var(--font-heading-main), sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+
+.step-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0;
+}
+
+.step-card p {
+    color: var(--body-grey);
+    font-size: var(--fs-small);
+    margin-bottom: 0;
+}
+
+/* Documents required list */
+.documents-wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.assessment-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.assessment-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid #F0E4E4;
+    color: var(--body-grey);
+    font-size: var(--fs-small);
+    line-height: 1.6;
+}
+
+.assessment-list li:last-child {
+    border-bottom: none;
+}
+
+.assessment-list svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.assessment-list strong {
+    color: var(--black);
+}
+
+/* Admission enquiry form card */
+.admission-form-card {
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.contact-heading {
+    font-family: var(--font-heading-main);
+    font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.contact-intro {
+    color: var(--body-grey);
+    font-size: var(--fs-small);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.contact-form-group {
+    margin-bottom: 1.25rem;
+}
+
+.contact-form-group label {
+    display: block;
+    font-size: var(--fs-small);
+    color: var(--body-grey);
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-group input,
+.contact-form-group select,
+.contact-form-group textarea {
+    width: 100%;
+    background: #FDEFEF;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    font-family: var(--font-body);
+    font-size: var(--fs-small);
+    color: var(--black);
+    transition: border-color 0.3s ease-in-out;
+}
+
+.contact-form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-form-group input:focus,
+.contact-form-group select:focus,
+.contact-form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-red);
+}
+
+.contact-submit-wrapper {
+    text-align: center;
+    margin-top: 1.75rem;
+}
+
+.btn-submit {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: 1px solid var(--primary-blue);
+    padding: 1rem 3rem;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: color 0.4s ease-in-out;
+}
+
+.btn-submit::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--white);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.btn-submit:hover::before {
+    transform: scaleX(1);
+}
+
+.btn-submit:hover {
+    color: var(--primary-blue);
+}
+
+@media (max-width: 991px) {
+    .admission-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .admissions-hero {
+        height: 60vh;
+    }
+    .section-intro {
+        margin-bottom: 2rem;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .admission-form-card {
+        padding: 1.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .admission-steps {
+        grid-template-columns: 1fr;
+    }
+    .admission-form-card {
+        padding: 1.25rem;
+    }
+    .btn-submit {
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+}

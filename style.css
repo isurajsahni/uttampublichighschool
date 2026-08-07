@@ -335,6 +335,40 @@ a.nav-links.active::after {
             height: 100%;
             object-fit: cover;
         }
+
+/* Hero responsive visibility: desktop hero by default, mobile hero on phones */
+.hero-mobile {
+    display: none;
+}
+
+.hero-desktop {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .hero-desktop {
+        display: none;
+    }
+
+    .hero-mobile {
+        display: block;
+    }
+
+    /* Portrait phone images look best shorter than full viewport height */
+    .hero-mobile .slider {
+        height: 90vh;
+    }
+
+    .hero-mobile .slides {
+        width: 600%;
+    }
+
+    .hero-mobile .slide {
+        width: 100vw;
+        height: 90vh;
+    }
+}
+
   .big-width{
     width: 22px;
   }
@@ -402,7 +436,8 @@ a.nav-links.active::after {
 
 .card {
     position: relative;
-    flex: 0 0 calc(25% - 15px);
+    flex: 0 0 450px;
+    min-width: 450px;
     border-radius: 12px;
     overflow: hidden;
     height: 100%;
@@ -460,9 +495,6 @@ a.nav-links.active::after {
 /* Tablet */
 
 @media (max-width: 991px) {
-    .card {
-        flex-basis: calc(50% - 10px);
-    }
     .left-40{
   width: 100%;
 }
@@ -826,7 +858,9 @@ img.principal-image-mobile {
     position: relative;
     max-width: 480px;
     margin: 0 auto;
-    padding: 60px 12px 0;
+    /* Room on every side so the card's box-shadow is not clipped by the
+       Slick track's overflow:hidden — the bottom shadow was being cut off. */
+    padding: 60px 22px 34px;
 }
 
 .testimonial-content {
