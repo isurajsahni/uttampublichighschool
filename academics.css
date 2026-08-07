@@ -167,6 +167,26 @@
     margin-bottom: 0;
 }
 
+/* The global rule adds a 50px top margin; not needed inside this
+   section, which already carries its own vertical padding. */
+.counter-wrapper {
+    margin-top: 0;
+}
+
+/* Subject tiles that use a letterform instead of a pictogram */
+.subject-letter {
+    font-family: var(--font-heading-main), sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--primary-red);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+
 /* Assessment list */
 .assessment-flex {
     display: flex;
