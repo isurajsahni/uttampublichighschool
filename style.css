@@ -1226,3 +1226,52 @@ a.footer-link.active{
         font-size: 16px;
     }
 }
+/* ============================================================
+   Scroll reveal animations (fade-up / down / left / right)
+   Elements carry data-reveal="..."; js/reveal.js adds .is-visible.
+   ============================================================ */
+@media (prefers-reduced-motion: no-preference) {
+    .reveal-ready [data-reveal] {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+        transition-delay: var(--reveal-delay, 0s);
+        will-change: opacity, transform;
+    }
+
+    .reveal-ready [data-reveal="fade-down"] {
+        transform: translateY(-40px);
+    }
+
+    /* fade-right = slides in from the left; fade-left = from the right */
+    .reveal-ready [data-reveal="fade-right"] {
+        transform: translateX(-40px);
+    }
+
+    .reveal-ready [data-reveal="fade-left"] {
+        transform: translateX(40px);
+    }
+
+    .reveal-ready [data-reveal="fade"] {
+        transform: none;
+    }
+
+    .reveal-ready [data-reveal].is-visible {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* Staggered reveal: put .reveal-stagger on a container and data-reveal on
+       its direct children — each child fades in a beat after the previous. */
+    .reveal-ready .reveal-stagger > [data-reveal]:nth-child(2) { --reveal-delay: 0.08s; }
+    .reveal-ready .reveal-stagger > [data-reveal]:nth-child(3) { --reveal-delay: 0.16s; }
+    .reveal-ready .reveal-stagger > [data-reveal]:nth-child(4) { --reveal-delay: 0.24s; }
+    .reveal-ready .reveal-stagger > [data-reveal]:nth-child(5) { --reveal-delay: 0.32s; }
+    .reveal-ready .reveal-stagger > [data-reveal]:nth-child(6) { --reveal-delay: 0.40s; }
+    .reveal-ready .reveal-stagger > [data-reveal]:nth-child(7) { --reveal-delay: 0.48s; }
+    .reveal-ready .reveal-stagger > [data-reveal]:nth-child(8) { --reveal-delay: 0.56s; }
+    .reveal-ready .reveal-stagger > [data-reveal]:nth-child(9) { --reveal-delay: 0.64s; }
+    .reveal-ready .reveal-stagger > [data-reveal]:nth-child(10) { --reveal-delay: 0.72s; }
+    .reveal-ready .reveal-stagger > [data-reveal]:nth-child(11) { --reveal-delay: 0.80s; }
+    .reveal-ready .reveal-stagger > [data-reveal]:nth-child(12) { --reveal-delay: 0.88s; }
+}
