@@ -56,6 +56,8 @@
     font-family: var(--font-heading-main);
     font-weight: 700;
     margin-bottom: 0.5rem;
+    /* equal-width digits so the number doesn't twitch as it counts */
+    font-variant-numeric: tabular-nums;
 }
 
 .mini-stats .stat-item p {

@@ -610,6 +610,12 @@ p.big {
     align-items: center;
     justify-content: space-between;
 }
+/* Size the two columns from available space, not their content, so a
+   growing counter value can't push the sibling image around (jitter fix). */
+.about-flex > .right-about {
+    flex: 1 1 0;
+    min-width: 0;
+}
 @media (max-width: 991px) {
     .about-flex{
     flex-direction: column;
