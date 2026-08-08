@@ -1049,6 +1049,12 @@ img.principal-image-mobile {
     white-space: nowrap;
 }
 
+/* Header CTA buttons are a touch smaller than the in-page ones */
+.cta-wrapper-header .btn-primary,
+.cta-wrapper-header .btn-secondary {
+    font-size: 16px;
+}
+
 @media (max-width: 767px) {
     .cta {
         padding: 6rem 1rem;
