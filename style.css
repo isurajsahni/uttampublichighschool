@@ -49,8 +49,14 @@
   --wrapper-width-medium: 80rem;
 }
 
+/* clip (not hidden) stops the scroll-reveal translateX overshoot from adding a
+   horizontal scrollbar, while keeping the sticky header working */
+html {
+  overflow-x: clip;
+}
 body {
   background: #fff;
+  overflow-x: clip;
 }
 
 /** hero section */
@@ -1065,7 +1071,7 @@ img.principal-image-mobile {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 0;
+    padding: 80px 1rem 20px;
 }
 .logo-footer .logo {
     max-width: 270px;
@@ -1207,7 +1213,7 @@ a.footer-link.active{
 
 @media (max-width: 767px) {
     .footer {
-        padding: 0;
+        padding: 50px 1rem 20px;
     }
     .footer-grid {
         gap: 2.5rem;
@@ -1222,9 +1228,6 @@ a.footer-link.active{
 }
 
 @media (max-width: 576px) {
-    .footer {
-        padding: 0;
-    }
     .footer-grid {
         grid-template-columns: 1fr;
     }
