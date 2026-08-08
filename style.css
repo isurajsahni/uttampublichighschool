@@ -928,7 +928,7 @@ img.principal-image-mobile {
 .testimonial-slider .slick-next {
     position: absolute;
     top: auto;
-    bottom: -60px;
+    bottom: -30px;
     width: 60px;
     height: 24px;
     padding: 0;
@@ -992,7 +992,7 @@ img.principal-image-mobile {
 }
 
 .testimonial-section .wrapper-medium {
-    padding-bottom: 5rem;
+    padding-bottom: 30px;
 }
 
 /* CTA Section */
@@ -1015,6 +1015,15 @@ img.principal-image-mobile {
 .wrapper-cta {
     max-width: var(--wrapper-width-medium);
     margin: 0 auto;
+}
+
+.cta h3 {
+    font-size: 16px;
+}
+
+/* Activity gallery sits flush — no section padding */
+.activity-section.padding-section-medium {
+    padding: 0;
 }
 
 .cta-wrapper{
@@ -1056,7 +1065,7 @@ img.principal-image-mobile {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 4rem 1rem 20px;
+    padding: 0;
 }
 .logo-footer .logo {
     max-width: 270px;
@@ -1198,7 +1207,7 @@ a.footer-link.active{
 
 @media (max-width: 767px) {
     .footer {
-        padding: 3rem 1rem 20px;
+        padding: 0;
     }
     .footer-grid {
         gap: 2.5rem;
@@ -1214,7 +1223,7 @@ a.footer-link.active{
 
 @media (max-width: 576px) {
     .footer {
-        padding: 1rem;
+        padding: 0;
     }
     .footer-grid {
         grid-template-columns: 1fr;
