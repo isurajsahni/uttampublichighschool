@@ -563,6 +563,10 @@ img.about-image {
     width: 100%;
     border-radius:20px;
 }
+/* Extra breathing room below the home-page About section */
+.about-section.padding-section-large {
+    padding-bottom: 130px;
+}
 .image-container {
     max-width: 650px;
     width: 100%;
@@ -866,6 +870,10 @@ img.principal-image-mobile {
     background: #fafafa;
 }
 
+.testimonial-section h2 {
+    margin-bottom: 0;
+}
+
 .testimonial-slider {
     margin-top: 5rem;
 }
@@ -1107,6 +1115,10 @@ a.text-big-footer {
     line-height: 1.2em;
     color: #3F3F3F;
 }
+/* "Address:" label is a <span>, which the p/a rules above don't cover */
+span.text-big-footer {
+    font-weight: 700;
+}
 a.footer-link{
     font-size: 18px;
     line-height: 1.2em;
@@ -1219,7 +1231,8 @@ a.footer-link.active{
 
 @media (max-width: 767px) {
     .footer {
-        padding: 50px 1rem 20px;
+        /* no side padding — .wrapper already supplies the gutters */
+        padding: 50px 0 20px;
     }
     .footer-grid {
         gap: 2.5rem;
