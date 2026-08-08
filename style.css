@@ -49,6 +49,10 @@
   --wrapper-width-medium: 80rem;
 }
 
+body {
+  background: #fff;
+}
+
 /** hero section */
 .icon-box {
     display: flex;
@@ -138,11 +142,17 @@
   color: var(--white);
 }
 img.logo {
-    max-width: 220px;
+    max-width: 200px;
     width: 100%;
+    height: auto;
 }
 .navbar{
   padding: 0.825rem 0rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 .nav-menu {
     flex: 1;
@@ -152,7 +162,7 @@ img.logo {
     gap: 1.5rem;
 }
 a.nav-links {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     line-height: 1.3em;
     color: var(--primary-blue);
@@ -1203,6 +1213,9 @@ a.footer-link.active{
 }
 
 @media (max-width: 576px) {
+    .footer {
+        padding: 1rem;
+    }
     .footer-grid {
         grid-template-columns: 1fr;
     }
