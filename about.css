@@ -88,8 +88,8 @@
 }
 
 .vm-icon {
-    width: 80px;
-    height: 80px;
+    width: 104px;
+    height: 104px;
     border-radius: 50%;
     background: #FBDDDD;
     display: flex;
@@ -99,8 +99,8 @@
 }
 
 .vm-icon img {
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 54px;
+    max-height: 54px;
 }
 
 .vm-card h3 {
@@ -123,7 +123,7 @@
 }
 
 .value-card {
-    max-width: 380px;
+    max-width: 400px;
     width: 100%;
     background: var(--white);
     border-radius: var(--radius-sm);

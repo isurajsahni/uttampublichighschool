@@ -1038,7 +1038,8 @@ img.principal-image-mobile {
 }
 
 .cta h3 {
-    font-size: 16px;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 /* Activity gallery sits flush — no section padding */
