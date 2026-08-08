@@ -232,7 +232,7 @@ a.nav-links.active::after {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1200px) {
   .hamburger {
     display: flex;
   }
