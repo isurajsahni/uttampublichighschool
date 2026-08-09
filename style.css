@@ -1238,6 +1238,12 @@ a.footer-link.active{
     .footer-bottom {
         justify-content: flex-start;
     }
+
+    .gridx2{
+        display:flex !important;
+        flex-direction:column;
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1334,7 +1340,7 @@ a.footer-link.active{
 /* Floating WhatsApp button (bottom-left, all pages) */
 .whatsapp-float {
     position: fixed;
-    left: 24px;
+    right: 24px;
     bottom: 24px;
     width: 56px;
     height: 56px;
@@ -1357,7 +1363,7 @@ a.footer-link.active{
 }
 @media (max-width: 576px) {
     .whatsapp-float {
-        left: 16px;
+        right: 16px;
         bottom: 16px;
         width: 52px;
         height: 52px;
@@ -1366,4 +1372,19 @@ a.footer-link.active{
         width: 30px;
         height: 30px;
     }
+
+
+}
+
+.gridx2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+img.achivemnet-image {
+    width: 100%;
+}
+.achivement{
+    padding-bottom: 80px;
+    background:white;
 }
