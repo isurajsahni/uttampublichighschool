@@ -1330,3 +1330,40 @@ a.footer-link.active{
     .reveal-ready .reveal-stagger > [data-reveal]:nth-child(11) { --reveal-delay: 0.80s; }
     .reveal-ready .reveal-stagger > [data-reveal]:nth-child(12) { --reveal-delay: 0.88s; }
 }
+
+/* Floating WhatsApp button (bottom-left, all pages) */
+.whatsapp-float {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    z-index: 900;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.whatsapp-float img {
+    width: 32px;
+    height: 32px;
+}
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 576px) {
+    .whatsapp-float {
+        left: 16px;
+        bottom: 16px;
+        width: 52px;
+        height: 52px;
+    }
+    .whatsapp-float img {
+        width: 30px;
+        height: 30px;
+    }
+}
