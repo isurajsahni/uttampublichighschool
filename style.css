@@ -331,7 +331,7 @@ a.nav-links.active::after {
 
         .slides {
             display: flex;
-            width: 300%;
+            width: 500%;
             height: 100%;
             transition: transform 0.8s ease-in-out;
         }
@@ -376,7 +376,7 @@ a.nav-links.active::after {
     }
 
     .hero-mobile .slides {
-        width: 600%;
+        width: 700%;
     }
 
     .hero-mobile .slide {
@@ -728,7 +728,7 @@ p.big {
     justify-content: center;
 }
 .image-contianer-blue-box{
-    background-image: url('Assets/Image/principle image.png');
+    background-image: url('Assets/Image/principal.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -737,7 +737,7 @@ p.big {
     min-height: 500px;
 }
 .image-contianer-blue-box.director-image-container{
-    background-image: url('Assets/Image/director.png');
+    background-image: url('Assets/Image/director.webp');
 }
 /* Opt-out for pages where the section already supplies its own top spacing */
 .blue-box.no-margin-top {
@@ -756,7 +756,10 @@ img.principal-image-mobile {
     max-width: 100%;
     padding: 60px;
 }
-.image-contianer-blue-box {
+/* Below 991px the portrait is shown as an <img>, so the background copy is
+   dropped. The director variant needs matching specificity to be reset too. */
+.image-contianer-blue-box,
+.image-contianer-blue-box.director-image-container {
     max-width: 100%;
     min-height: 0;
     height: 100%;
