@@ -621,6 +621,11 @@ p.big {
     flex-direction: column;
     gap: 40px;
 }
+/* Stacked, the column gap already separates the text from the image, so the
+   trailing margin on the last paragraph reads as a second, doubled space. */
+.about-flex > .right-about > :last-child {
+    margin-bottom: 0;
+}
 .right-about {
     max-width: 100%;
 }
@@ -884,7 +889,7 @@ img.principal-image-mobile {
 }
 
 .testimonial-slider {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .testimonial-card {

@@ -84,6 +84,14 @@
     .activity-list {
         gap: 0.6rem;
     }
+
+    /* This section leads with its image so the desktop layout alternates
+       image-left / text-right. Once the columns stack, that would put its
+       image directly beneath the previous section's image, so the order is
+       flipped to keep every stacked section reading text-then-image. */
+    .about-flex--image-lead {
+        flex-direction: column-reverse;
+    }
 }
 
 @media (max-width: 767px) {
