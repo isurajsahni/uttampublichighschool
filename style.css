@@ -331,7 +331,7 @@ a.nav-links.active::after {
 
         .slides {
             display: flex;
-            width: 500%;
+            width: 700%;
             height: 100%;
             transition: transform 0.8s ease-in-out;
         }
@@ -376,7 +376,7 @@ a.nav-links.active::after {
     }
 
     .hero-mobile .slides {
-        width: 700%;
+        width: 800%;
     }
 
     .hero-mobile .slide {
@@ -1034,7 +1034,7 @@ img.principal-image-mobile {
             rgba(0, 0, 0, 0.5),
             rgba(0, 0, 0, 0.5)
         ),
-        url('Assets/Image/hero_image_slider_2.webp');
+        url('Assets/Image/cta image new.webp');
 
     padding: 10rem 1rem;
     background-size: cover;
