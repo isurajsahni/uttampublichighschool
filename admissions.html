@@ -173,11 +173,10 @@
             <h2 class="contact-heading">Admission <span class="highlight-red">Enquiry Form</span></h2>
             <p class="contact-intro">Fill in your details below and our admissions team will get back to you with the next steps.</p>
 
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form id="admissionForm" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="a7be609b-e0eb-4148-b2ee-23be3ced3a89">
                 <input type="hidden" name="to" value="ramasre007@gmail.com">
                 <input type="hidden" name="subject" value="New admission enquiry — Uttam Public School website">
-                <input type="hidden" name="redirect" value="https://web3forms.com/success">
                 <div class="form-row">
                     <div class="contact-form-group">
                         <label for="studentName">Student's Full Name</label>
@@ -237,6 +236,7 @@
                 <div class="contact-submit-wrapper">
                     <button type="submit" class="btn-submit">Submit Enquiry</button>
                 </div>
+                <div id="admissionFormResult" style="display:none; margin-top:1rem; padding:1rem; border-radius:8px; text-align:center; font-weight:600;"></div>
             </form>
         </div>
     </div>
@@ -305,6 +305,43 @@
 <!-- Page Scripts -->
 <script src="js/navbar.js"></script>
 <script src="js/reveal.js"></script>
+<script>
+const admissionForm = document.getElementById("admissionForm");
+const admissionResult = document.getElementById("admissionFormResult");
+admissionForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const btn = admissionForm.querySelector(".btn-submit");
+    const originalText = btn.textContent;
+    btn.textContent = "Sending...";
+    btn.disabled = true;
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: new FormData(admissionForm)
+    }).then(r => r.json()).then(data => {
+        if (data.success) {
+            admissionResult.style.display = "block";
+            admissionResult.style.background = "#d4edda";
+            admissionResult.style.color = "#155724";
+            admissionResult.textContent = "Thank you! Your admission enquiry has been submitted successfully.";
+            admissionForm.reset();
+        } else {
+            admissionResult.style.display = "block";
+            admissionResult.style.background = "#f8d7da";
+            admissionResult.style.color = "#721c24";
+            admissionResult.textContent = "Something went wrong. Please try again.";
+        }
+    }).catch(() => {
+        admissionResult.style.display = "block";
+        admissionResult.style.background = "#f8d7da";
+        admissionResult.style.color = "#721c24";
+        admissionResult.textContent = "Something went wrong. Please try again.";
+    }).finally(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        setTimeout(() => { admissionResult.style.display = "none"; }, 5000);
+    });
+});
+</script>
 <!-- WhatsApp floating button -->
 <a href="https://wa.me/919417887796" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><img src="Assets/icons/whatsapp.svg" alt="" aria-hidden="true"></a>
 </body>
