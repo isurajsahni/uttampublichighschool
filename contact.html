@@ -134,9 +134,11 @@
                 <h2 class="contact-heading">Send Us Message!</h2>
                 <p class="contact-intro">Have a question or need more information? Fill out the contact form below, and our team will get back to you as soon as possible.</p>
 
-                <!-- Formspree: replace YOUR_FORMSPREE_ID with your form ID from formspree.io -->
-                <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                    <input type="hidden" name="_subject" value="New contact message — Uttam Public School website">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="a7be609b-e0eb-4148-b2ee-23be3ced3a89">
+                    <input type="hidden" name="to" value="ramasre007@gmail.com">
+                    <input type="hidden" name="subject" value="New contact message — Uttam Public School website">
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
                     <div class="contact-form-group">
                         <label for="fullName">Full Name</label>
                         <input type="text" id="fullName" name="fullName" autocomplete="name" required>
