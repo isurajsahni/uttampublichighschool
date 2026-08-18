@@ -1274,6 +1274,11 @@ a.footer-link.active{
         flex-direction:column;
         gap: 2rem;
     }
+    .gridx3{
+        display:flex !important;
+        flex-direction:column;
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1411,8 +1416,14 @@ a.footer-link.active{
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
+.gridx3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
 img.achivemnet-image {
     width: 100%;
+    border-radius: var(--radius-sm);
 }
 .achivement{
     padding-bottom: 80px;
